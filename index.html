@@ -1,142 +1,123 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html><html lang="en">
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Ghanshyam Portfolio</title>
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-<style>
+<title>GHANSHYAM TAWANIYA</title><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"><style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:sans-serif}
 
 body{
-margin:0;
-font-family:sans-serif;
-background:#0f0f0f;
-color:white;
+background:#000;
+color:#fff;
 text-align:center;
+overflow-x:hidden;
+}
+
+/* animated gradient background */
+body::before{
+content:"";
+position:fixed;
+width:200%;
+height:200%;
+background:radial-gradient(circle,#ff004c 0%,transparent 60%);
+animation:bgmove 12s linear infinite;
+opacity:0.15;
+}
+
+@keyframes bgmove{
+0%{transform:translate(-20%,-20%)}
+50%{transform:translate(20%,20%)}
+100%{transform:translate(-20%,-20%)}
 }
 
 .hero{
-padding:120px 20px;
+padding-top:120px;
 }
 
-.hero img{
-width:180px;
-height:180px;
+.profile{
+width:200px;
+height:200px;
 border-radius:50%;
-border:4px solid #ff004c;
-box-shadow:0 0 25px #ff004c;
+border:5px solid #ff004c;
+box-shadow:0 0 30px #ff004c,0 0 70px #ff004c;
+animation:pulse 2s infinite;
+object-fit:cover;
+}
+
+@keyframes pulse{
+0%{box-shadow:0 0 20px #ff004c}
+50%{box-shadow:0 0 70px #ff004c}
+100%{box-shadow:0 0 20px #ff004c}
 }
 
 h1{
-font-size:40px;
+font-size:48px;
+margin-top:20px;
 }
 
 .typing{
 color:#ff004c;
-font-weight:bold;
-font-size:22px;
+font-size:24px;
+margin-top:10px;
 height:30px;
 }
 
 .icons{
-margin-top:30px;
+margin-top:40px;
 }
 
 .icons a{
-color:white;
-font-size:30px;
-margin:15px;
+color:#fff;
+font-size:32px;
+margin:20px;
 transition:0.3s;
 }
 
 .icons a:hover{
 color:#ff004c;
-transform:scale(1.2);
+transform:scale(1.3);
 }
 
 .section{
-padding:80px 20px;
-max-width:800px;
-margin:auto;
+margin-top:120px;
+max-width:900px;
+margin-left:auto;
+margin-right:auto;
+padding:20px;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+margin-top:40px;
 }
 
 .card{
 background:#111;
 padding:30px;
-margin:20px;
-border-radius:10px;
-transition:0.3s;
+border-radius:12px;
+transition:0.4s;
 }
 
 .card:hover{
-transform:scale(1.05);
-box-shadow:0 0 20px #ff004c;
+transform:translateY(-10px);
+box-shadow:0 0 30px #ff004c;
 }
+</style></head><body><div class="hero"><img src="https://img.sanishtech.com/u/9a42656f92fc34aa14461b699d873aa1.jpg" class="profile"><h1>Ghanshyam</h1><div class="typing"></div><div class="icons"><a href="xxx"><i class="fab fa-instagram"></i></a>
+<a href="https://youtube.com/@pyaari_army?si=gyDdU_cuz6qLvxsk"><i class="fab fa-youtube"></i></a>
+<a href="https://youtube.com/@pyaari_army?si=gyDdU_cuz6qLvxsk"><i class="fa-solid fa-envelope"></i></a>
 
-</style>
-
-</head>
-
-<body>
-
-<div class="hero">
-
-<img src="xxx">
-
-<h1>Ghanshyam</h1>
-
-<div class="typing"></div>
-
-<div class="icons">
-
-<a href="ghanshyam"><i class="fab fa-instagram"></i></a>
-
-<a href="ghanshyam"><i class="fab fa-youtube"></i></a>
-
-<a href="ghanshyam"><i class="fa-solid fa-envelope"></i></a>
-
-</div>
-
-</div>
-
-<div class="section">
-
-<h2>About Me</h2>
-
-<p>
-Main AI content aur YouTube shorts banata hu.
-</p>
-
-</div>
-
-<div class="section">
-
-<h2>Projects</h2>
-
-<div class="card">
-<h3>AI Videos</h3>
-<p>Cinematic AI videos create kiye.</p>
-</div>
-
-<div class="card">
+</div></div><div class="section"><h2>My Projects</h2><div class="cards"><div class="card">
+<h3>AI Video Editing</h3>
+<p>Cinematic AI videos and edits.</p>
+</div><div class="card">
 <h3>YouTube Shorts</h3>
-<p>Viral shorts content.</p>
-</div>
-
-</div>
-
-<script>
-
-var text = [
-"Content Creator",
-"AI Creator",
-"YouTube Shorts Creator"
-];
-
+<p>Short form viral content creator.</p>
+</div><div class="card">
+<h3>Creative Edits</h3>
+<p>High quality social media edits.</p>
+</div></div></div><script>
+var text=["YouTube Shorts Creator","AI Content Creator","Video Editor"];
 var count=0;
 var index=0;
 var current="";
@@ -144,9 +125,7 @@ var letter="";
 
 (function type(){
 
-if(count===text.length){
-count=0;
-}
+if(count===text.length){count=0;}
 
 current=text[count];
 letter=current.slice(0,++index);
@@ -158,11 +137,8 @@ count++;
 index=0;
 }
 
-setTimeout(type,120);
+setTimeout(type,100);
 
 })();
-
-</script>
-
-</body>
+</script></body>
 </html>
