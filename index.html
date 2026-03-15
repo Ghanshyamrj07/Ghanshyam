@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Ghanshyam</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
 
@@ -14,90 +15,75 @@ body{
 margin:0;
 padding:0;
 background:black;
-font-family:'Orbitron',sans-serif;
+font-family:Arial;
 color:white;
 text-align:center;
-overflow:hidden;
 }
 
-/* Neon Background Lights */
+/* background neon */
 
-body::before{
-content:"";
-position:fixed;
-width:100%;
-height:100%;
-background:radial-gradient(circle at 20% 30%,#ff004c55,transparent),
-radial-gradient(circle at 80% 70%,#00ffff55,transparent),
-radial-gradient(circle at 50% 50%,#ff00ff55,transparent);
-animation:moveLights 8s infinite alternate;
-z-index:-1;
+body{
+background:linear-gradient(90deg,#000000,#42002b,#000000);
+background-size:400% 400%;
+animation:bgmove 6s infinite;
 }
 
-@keyframes moveLights{
-0%{transform:scale(1);}
-100%{transform:scale(1.3);}
+@keyframes bgmove{
+0%{background-position:0%}
+50%{background-position:100%}
+100%{background-position:0%}
 }
 
-/* Profile */
+/* profile image */
 
 .profile img{
-width:160px;
-height:160px;
+width:170px;
+height:170px;
 border-radius:50%;
-border:5px solid #ff004c;
-box-shadow:0 0 30px #ff004c,0 0 60px #ff004c;
 margin-top:80px;
+border:5px solid #ff0055;
+box-shadow:0 0 25px #ff0055,0 0 60px #ff0055;
 }
 
-/* Name Neon */
+/* name */
 
 h1{
-font-size:50px;
+font-size:48px;
 margin:20px 0;
-color:#fff;
-text-shadow:
-0 0 10px #ff004c,
-0 0 20px #ff004c,
-0 0 40px #ff004c,
-0 0 80px #ff004c;
-animation:glow 2s infinite alternate;
+text-shadow:0 0 15px #ff0055,0 0 40px #ff0055;
 }
 
-@keyframes glow{
-from{ text-shadow:0 0 10px #ff004c;}
-to{ text-shadow:0 0 40px #ff004c,0 0 80px #ff004c;}
-}
-
-/* Social Icons */
+/* icons */
 
 .icons{
+display:flex;
+justify-content:center;
+gap:50px;
 margin-top:30px;
 }
 
 .icons a{
-display:inline-block;
-margin:15px;
-font-size:30px;
+font-size:40px;
 color:white;
 transition:0.3s;
 }
 
 .icons a:hover{
-color:#ff004c;
-transform:scale(1.4);
-text-shadow:0 0 20px #ff004c;
+transform:scale(1.3);
+color:#ff0055;
+text-shadow:0 0 20px #ff0055;
 }
 
-/* Projects */
+/* projects */
 
 .projects{
 margin-top:120px;
-font-size:35px;
+font-size:36px;
 text-shadow:0 0 20px cyan;
 }
 
 </style>
+
 </head>
 
 <body>
@@ -109,19 +95,20 @@ text-shadow:0 0 20px cyan;
 <h1>Ghanshyam</h1>
 
 <div class="icons">
-<a href="#">📷</a>
-<a href="#">▶</a>
-<a href="#">✉</a>
+
+<a href="https://www.instagram.com/pandat_9991?igsh=amE2NmR0M3l3M2tx" target="_blank">
+<i class="fa-brands fa-instagram"></i>
+</a>
+
+<a href="https://youtube.com/@pyaari_army?si=bMPIGW54HI3bLlsk" target="_blank">
+<i class="fa-brands fa-youtube"></i>
+</a>
+
+<a href="mailto:example@gmail.com">
+<i class="fa-solid fa-envelope"></i>
+</a>
+
 </div>
-  <div class="icons">
-
-<a href="https://www.instagram.com/pandat_9991?igsh=amE2NmR0M3l3M2tx" target="_blank">📷</a>
-
-<a href="https://youtube.com/@pyaari_army?si=bMPIGW54HI3bLlsk" target="_blank">▶</a>
-
-<a href="ganshyamtawniya@gmail.com">✉</a>
-
-  </div>
 
 <div class="projects">
 My Projects
