@@ -1,144 +1,131 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GHANSHYAM TAWANIYA</title><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"><style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:sans-serif}
+
+<title>Ghanshyam</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
+
+<style>
 
 body{
-background:#000;
-color:#fff;
+margin:0;
+padding:0;
+background:black;
+font-family:'Orbitron',sans-serif;
+color:white;
 text-align:center;
-overflow-x:hidden;
+overflow:hidden;
 }
 
-/* animated gradient background */
+/* Neon Background Lights */
+
 body::before{
 content:"";
 position:fixed;
-width:200%;
-height:200%;
-background:radial-gradient(circle,#ff004c 0%,transparent 60%);
-animation:bgmove 12s linear infinite;
-opacity:0.15;
+width:100%;
+height:100%;
+background:radial-gradient(circle at 20% 30%,#ff004c55,transparent),
+radial-gradient(circle at 80% 70%,#00ffff55,transparent),
+radial-gradient(circle at 50% 50%,#ff00ff55,transparent);
+animation:moveLights 8s infinite alternate;
+z-index:-1;
 }
 
-@keyframes bgmove{
-0%{transform:translate(-20%,-20%)}
-50%{transform:translate(20%,20%)}
-100%{transform:translate(-20%,-20%)}
+@keyframes moveLights{
+0%{transform:scale(1);}
+100%{transform:scale(1.3);}
 }
 
-.hero{
-padding-top:120px;
-}
+/* Profile */
 
-.profile{
-width:200px;
-height:200px;
+.profile img{
+width:160px;
+height:160px;
 border-radius:50%;
 border:5px solid #ff004c;
-box-shadow:0 0 30px #ff004c,0 0 70px #ff004c;
-animation:pulse 2s infinite;
-object-fit:cover;
+box-shadow:0 0 30px #ff004c,0 0 60px #ff004c;
+margin-top:80px;
 }
 
-@keyframes pulse{
-0%{box-shadow:0 0 20px #ff004c}
-50%{box-shadow:0 0 70px #ff004c}
-100%{box-shadow:0 0 20px #ff004c}
-}
+/* Name Neon */
 
 h1{
-font-size:48px;
-margin-top:20px;
+font-size:50px;
+margin:20px 0;
+color:#fff;
+text-shadow:
+0 0 10px #ff004c,
+0 0 20px #ff004c,
+0 0 40px #ff004c,
+0 0 80px #ff004c;
+animation:glow 2s infinite alternate;
 }
 
-.typing{
-color:#ff004c;
-font-size:24px;
-margin-top:10px;
-height:30px;
+@keyframes glow{
+from{ text-shadow:0 0 10px #ff004c;}
+to{ text-shadow:0 0 40px #ff004c,0 0 80px #ff004c;}
 }
+
+/* Social Icons */
 
 .icons{
-margin-top:40px;
+margin-top:30px;
 }
 
 .icons a{
-color:#fff;
-font-size:32px;
-margin:20px;
+display:inline-block;
+margin:15px;
+font-size:30px;
+color:white;
 transition:0.3s;
 }
 
 .icons a:hover{
 color:#ff004c;
-transform:scale(1.3);
+transform:scale(1.4);
+text-shadow:0 0 20px #ff004c;
 }
 
-.section{
+/* Projects */
+
+.projects{
 margin-top:120px;
-max-width:900px;
-margin-left:auto;
-margin-right:auto;
-padding:20px;
+font-size:35px;
+text-shadow:0 0 20px cyan;
 }
 
-.cards{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:30px;
-margin-top:40px;
-}
+</style>
+</head>
 
-.card{
-background:#111;
-padding:30px;
-border-radius:12px;
-transition:0.4s;
-}
+<body>
 
-.card:hover{
-transform:translateY(-10px);
-box-shadow:0 0 30px #ff004c;
-}
-</style></head><body><div class="hero"><img src="https://img.sanishtech.com/u/9a42656f92fc34aa14461b699d873aa1.jpg" class="profile"><h1>Ghanshyam</h1><div class="typing"></div><div class="icons"><a href="xxx"><i class="fab fa-instagram"></i></a>
-<a href="https://youtube.com/@pyaari_army?si=gyDdU_cuz6qLvxsk"><i class="fab fa-youtube"></i></a>
-<a href="https://youtube.com/@pyaari_army?si=gyDdU_cuz6qLvxsk"><i class="fa-solid fa-envelope"></i></a>
+<div class="profile">
+<img src="https://img.sanishtech.com/u/9a42656f92fc34aa14461b699d873aa1.jpg">
+</div>
 
-</div></div><div class="section"><h2>My Projects</h2><div class="cards"><div class="card">
-<h3>AI Video Editing</h3>
-<p>Cinematic AI videos and edits.</p>
-</div><div class="card">
-<h3>YouTube Shorts</h3>
-<p>Short form viral content creator.</p>
-</div><div class="card">
-<h3>Creative Edits</h3>
-<p>High quality social media edits.</p>
-</div></div></div><script>
-var text=["YouTube Shorts Creator","AI Content Creator","Video Editor"];
-var count=0;
-var index=0;
-var current="";
-var letter="";
+<h1>Ghanshyam</h1>
 
-(function type(){
+<div class="icons">
+<a href="#">📷</a>
+<a href="#">▶</a>
+<a href="#">✉</a>
+</div>
+  <div class="icons">
 
-if(count===text.length){count=0;}
+<a href="https://www.instagram.com/pandat_9991?igsh=amE2NmR0M3l3M2tx" target="_blank">📷</a>
 
-current=text[count];
-letter=current.slice(0,++index);
+<a href="https://youtube.com/@pyaari_army?si=bMPIGW54HI3bLlsk" target="_blank">▶</a>
 
-document.querySelector(".typing").textContent=letter;
+<a href="ganshyamtawniya@gmail.com">✉</a>
 
-if(letter.length===current.length){
-count++;
-index=0;
-}
+  </div>
 
-setTimeout(type,100);
+<div class="projects">
+My Projects
+</div>
 
-})();
-</script></body>
+</body>
 </html>
